@@ -1,0 +1,28 @@
+plugin:
+    name: 'aero.manager::lang.plugin.name'
+    description: 'aero.manager::lang.plugin.description'
+    author: aero
+    icon: oc-icon-cubes
+    homepage: ''
+permissions:
+    managerSlider:
+        tab: Manager
+        label: Slider
+    managerPacks:
+        tab: Manager
+        label: Packs
+navigation:
+    manager:
+        label: Gestionar
+        url: aero/manager/editor/update/1
+        icon: icon-cubes
+        order: '50'
+        sideMenu:
+            side-menu-item:
+                label: Editor
+                url: aero/manager/editor/update/1
+                icon: icon-pencil-square-o
+            managerPacks:
+                label: Packs
+                url: aero/manager/packs
+                icon: icon-sitemap

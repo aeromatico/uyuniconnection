@@ -1,0 +1,145 @@
+tabs:
+    fields:
+        slider:
+            label: Gestionar
+            prompt: Nuevo
+            span: full
+            type: repeater
+            tab: Slider
+            form:
+                fields:
+                    title:
+                        label: Título
+                        span: auto
+                        type: text
+                    subtitle:
+                        label: Subtítulo
+                        span: auto
+                        type: text
+                    image:
+                        label: Imagen
+                        mode: image
+                        imageWidth: '400'
+                        imageHeight: '300'
+                        span: auto
+                        type: mediafinder
+        about_title:
+            label: 'Título de sección'
+            span: auto
+            type: text
+            tab: Nosotros
+        about_subtitle:
+            label: Subtítulo
+            span: auto
+            type: text
+            tab: Nosotros
+        about_mission:
+            label: Mísión
+            size: huge
+            span: auto
+            type: richeditor
+            tab: Nosotros
+        about_vision:
+            label: Visión
+            size: huge
+            span: auto
+            type: richeditor
+            tab: Nosotros
+        about_image1:
+            label: 'Imagen 1'
+            mode: image
+            imageWidth: '400'
+            imageHeight: '300'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Nosotros
+        about_image2:
+            label: 'Imagen 2'
+            mode: image
+            imageWidth: '400'
+            imageHeight: '300'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Nosotros
+        about_faqs:
+            label: 'Preguntas frecuentes'
+            prompt: 'Nueva pregunta'
+            span: full
+            type: repeater
+            tab: Nosotros
+            form:
+                fields:
+                    question:
+                        label: Pregunta
+                        span: auto
+                        type: text
+                    answer:
+                        label: Respuesta
+                        size: ''
+                        span: auto
+                        type: textarea
+        about_bg:
+            label: 'Imagen de fondo'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Nosotros
+        services_title:
+            label: 'Título de sección'
+            span: auto
+            type: text
+            tab: Servicios
+        services_subtitle:
+            label: Subtítulo
+            span: auto
+            type: text
+            tab: Servicios
+        services:
+            label: Gestionar
+            prompt: Nuevo
+            span: full
+            type: repeater
+            tab: Servicios
+            form:
+                fields:
+                    title:
+                        label: Título
+                        span: auto
+                        type: text
+                    description:
+                        label: Descripción
+                        size: ''
+                        span: auto
+                        type: textarea
+        services_bg:
+            label: 'Fondo de cabecera'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Servicios
+        services_bg2:
+            label: 'Fondo de pie'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Servicios

@@ -1,0 +1,94 @@
+==
+<header id="tg-header" class="tg-header tg-headervthree tg-haslayout">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="tg-topbar">
+						<nav class="tg-infonav">
+							<ul>
+								<li>
+									<i><img src="{{'assets/img/icons/icon-01.png' | theme }}" alt="image destinations"></i>
+									<span>1-800-321-6543</span>
+								</li>
+								<li>
+									<i><img src="{{'assets/img/icons/icon-02.png' | theme }}" alt="image destinations"></i>
+									<span>CHOOSE YOUR EXPERIENCE <a href="javascript:void(0);">Discover more</a></span>
+								</li>
+							</ul>
+						</nav>
+						<div class="tg-addnavcartsearch">
+							<nav class="tg-addnav">
+								<ul>
+									<li><a href="{{app}}/about">{{ 'about'|_ }}</a></li>
+									<li><a href="{{app}}/contact">{{ 'contact'|_ }}</a></li>
+								</ul>
+							</nav>
+							<nav class="tg-cartsearch">
+								<ul>
+									<li>
+										<a href="javascript:void(0);"><img src="{{'assets/img/icons/icon-03.png' | theme }}" alt="image destinations"></a>
+										<div class="tg-cartitems">
+											<div class="tg-cartlistitems">
+												<h3>Shopping Cart</h3>
+												<div class="tg-cartitem">
+													<figure class="tg-itemimg"><img src="{{'assets/img/products/img-11.jpg' | theme }}" alt="image description"></figure>
+													<div class="tg-contentbox">
+														<div class="tg-producthead">
+															<em>x 2</em>
+															<h4><a href="javascript:void(0);">Switzerland – 12 Days<span>Hiking Tour</span></a></h4>
+														</div>
+														<span>$600</span>
+													</div>
+												</div>
+												<div class="tg-cartitem">
+													<figure class="tg-itemimg"><img src="{{'assets/img/products/img-11.jpg' | theme }}" alt="image description"></figure>
+													<div class="tg-contentbox">
+														<div class="tg-producthead">
+															<em>x 2</em>
+															<h4><a href="javascript:void(0);">Switzerland – 12 Days<span>Hiking Tour</span></a></h4>
+														</div>
+														<span>$600</span>
+													</div>
+												</div>
+												<div class="tg-subtotal">
+													<h2>Subtotal</h2>
+													<span>$830</span>
+												</div>
+											</div>
+											<div class="tg-btnarea">
+												<a class="tg-btn" href="#"><span>view cart</span></a>
+											</div>
+										</div>
+									</li>
+									<li><a href="#tg-search"><img src="{{'assets/img/icons/icon-04.png' | theme }}" alt="image destinations"></a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="tg-navigationarea tg-headerfixed">
+						<strong class="tg-logo"><a href="index.html"><img src="{{'assets/img/logo.png' | theme }}" alt="company logo here"></a></strong>
+						<div class="tg-socialsignin">
+							<ul class="tg-socialicons">
+								<li><a href="javascript:void(0);"><i class="icon-facebook-logo-outline"></i></a></li>
+								<li><a href="javascript:void(0);"><i class="icon-instagram-social-outlined-logo"></i></a></li>
+								<li><a href="javascript:void(0);"><i class="icon-twitter-social-outlined-logo"></i></a></li>
+							</ul>
+							<div class="tg-userbox">
+								<a id="tg-btnsignin" class="tg-btn" href="#tg-loginsingup"><span>sign in</span></a>
+								<div class="dropdown tg-dropdown">
+									<button class="tg-btndropdown" id="tg-dropdowndashboard" type="button" data-toggle="dropdown">
+										<img src="{{'assets/img/language.png' | theme }}" alt="image description">
+										<span>{{ 'Language:'|_ }}</span>
+										<i class="fa fa-caret-down"></i>
+									</button>
+									<ul class="dropdown-menu tg-dropdownusermenu" aria-labelledby="tg-dropdowndashboard">
+										<li><a href="{{app}}/en/">English</a></li>
+										<li><a href="{{app}}/es/">Español</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						{% partial 'menu/main' %}
+					</div>
+				</div>
+			</div>
+		</header>

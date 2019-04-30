@@ -1,0 +1,229 @@
+1556057491a:1:{s:10:"slider.htm";a:6:{s:8:"fileName";s:10:"slider.htm";s:7:"content";s:5096:"[builderList editor]
+modelClass = "Aero\Manager\Models\Editor"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set e = editor.records[0] %}
+
+<div id="tg-homebannerslider" class="tg-homebannerslider tg-haslayout">
+			<div id="tg-homesliderfull" class="tg-homeslider tg-homesliderfull tg-homeslidervthree owl-carousel tg-haslayout">
+			
+			{% for c in e.slider %}
+				<figure class="item" data-vide-bg="poster: {{c.image | media}}" data-vide-options="position: 50% 50%">
+					<figcaption>
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									<div class="tg-slidercontent">
+										<h1>{{c.title}}</h1>
+										<h2>{{c.subtitle}}</h2>
+										<a class="tg-btn" href="javascript:void(0);"><span>Explore Tour</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</figcaption>
+				</figure>
+			 {% endfor %}
+
+			</div>
+			<div id="tg-homesliderthumbnails" class="tg-homeslider tg-homesliderthumbnails tg-homeslidervthree owl-carousel tg-haslayout">
+				{% for c in e.slider %}
+				<figure class="item" data-vide-bg="poster: {{c.image | media}}" data-vide-options="position: 50% 50%">
+					<figcaption>
+						<div class="tg-slidercontent">
+							<h1>{{c.title}}</h1>
+							<h2>{{c.subtitle}}</h2>
+						</div>
+					</figcaption>
+				</figure>
+				{% endfor %}
+			</div>
+			<div class="tg-findtour tg-nobackground">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<form class="tg-formtheme tg-formtrip">
+										<fieldset>
+											<div class="form-group">
+												<div class="tg-select">
+													<select class="selectpicker" data-live-search="true" data-width="100%">
+														<option data-tokens="Destinations">Destinations</option>
+														<option data-tokens="All Areas">All Areas</option>
+														<option data-tokens="Bayonne">Bayonne</option>
+														<option data-tokens="Greenville">Greenville</option>
+														<option data-tokens="Manhattan">Manhattan</option>
+														<option data-tokens="Queens">Queens</option>
+														<option data-tokens="The Heights">The Heights</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="tg-select">
+													<select class="selectpicker" data-live-search="true" data-width="100%">
+														<option data-tokens="Adventure Type">Adventure Type</option>
+														<option data-tokens="Ice Adventure Vacations">Ice Adventure Vacations</option>
+														<option data-tokens="National Park">National Park</option>
+														<option data-tokens="Adult Vacations">Adult Vacations</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="tg-select">
+													<select class="selectpicker" data-live-search="true" data-width="100%">
+														<option data-tokens="Travel Month">Travel Month</option>
+														<option data-tokens="January">January</option>
+														<option data-tokens="February">February</option>
+														<option data-tokens="March">March</option>
+														<option data-tokens="April">April</option>
+														<option data-tokens="May">May</option>
+														<option data-tokens="June">June</option>
+														<option data-tokens="July">July</option>
+														<option data-tokens="August">August</option>
+														<option data-tokens="September">September</option>
+														<option data-tokens="October">October</option>
+														<option data-tokens="November">November</option>
+														<option data-tokens="December">December</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="tg-select">
+													<select class="selectpicker" data-live-search="true" data-width="100%">
+														<option data-tokens="Duration">Duration</option>
+														<option data-tokens="2 weeks">2 weeks</option>
+														<option data-tokens="3 weeks">3 weeks</option>
+														<option data-tokens="4 weeks">4 weeks</option>
+														<option data-tokens="5 weeks">5 weeks</option>
+														<option data-tokens="6 weeks">6 weeks</option>
+														<option data-tokens="7 weeks">7 weeks</option>
+														<option data-tokens="8 weeks">8 weeks</option>
+														<option data-tokens="9 weeks">9 weeks</option>
+														<option data-tokens="10 weeks">10 weeks</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<button class="tg-btn" type="submit"><span>find tours</span></button>
+											</div>
+										</fieldset>
+									</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>";s:5:"mtime";i:1555983017;s:6:"markup";s:4859:"{% set e = editor.records[0] %}
+
+<div id="tg-homebannerslider" class="tg-homebannerslider tg-haslayout">
+			<div id="tg-homesliderfull" class="tg-homeslider tg-homesliderfull tg-homeslidervthree owl-carousel tg-haslayout">
+			
+			{% for c in e.slider %}
+				<figure class="item" data-vide-bg="poster: {{c.image | media}}" data-vide-options="position: 50% 50%">
+					<figcaption>
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									<div class="tg-slidercontent">
+										<h1>{{c.title}}</h1>
+										<h2>{{c.subtitle}}</h2>
+										<a class="tg-btn" href="javascript:void(0);"><span>Explore Tour</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</figcaption>
+				</figure>
+			 {% endfor %}
+
+			</div>
+			<div id="tg-homesliderthumbnails" class="tg-homeslider tg-homesliderthumbnails tg-homeslidervthree owl-carousel tg-haslayout">
+				{% for c in e.slider %}
+				<figure class="item" data-vide-bg="poster: {{c.image | media}}" data-vide-options="position: 50% 50%">
+					<figcaption>
+						<div class="tg-slidercontent">
+							<h1>{{c.title}}</h1>
+							<h2>{{c.subtitle}}</h2>
+						</div>
+					</figcaption>
+				</figure>
+				{% endfor %}
+			</div>
+			<div class="tg-findtour tg-nobackground">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<form class="tg-formtheme tg-formtrip">
+										<fieldset>
+											<div class="form-group">
+												<div class="tg-select">
+													<select class="selectpicker" data-live-search="true" data-width="100%">
+														<option data-tokens="Destinations">Destinations</option>
+														<option data-tokens="All Areas">All Areas</option>
+														<option data-tokens="Bayonne">Bayonne</option>
+														<option data-tokens="Greenville">Greenville</option>
+														<option data-tokens="Manhattan">Manhattan</option>
+														<option data-tokens="Queens">Queens</option>
+														<option data-tokens="The Heights">The Heights</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="tg-select">
+													<select class="selectpicker" data-live-search="true" data-width="100%">
+														<option data-tokens="Adventure Type">Adventure Type</option>
+														<option data-tokens="Ice Adventure Vacations">Ice Adventure Vacations</option>
+														<option data-tokens="National Park">National Park</option>
+														<option data-tokens="Adult Vacations">Adult Vacations</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="tg-select">
+													<select class="selectpicker" data-live-search="true" data-width="100%">
+														<option data-tokens="Travel Month">Travel Month</option>
+														<option data-tokens="January">January</option>
+														<option data-tokens="February">February</option>
+														<option data-tokens="March">March</option>
+														<option data-tokens="April">April</option>
+														<option data-tokens="May">May</option>
+														<option data-tokens="June">June</option>
+														<option data-tokens="July">July</option>
+														<option data-tokens="August">August</option>
+														<option data-tokens="September">September</option>
+														<option data-tokens="October">October</option>
+														<option data-tokens="November">November</option>
+														<option data-tokens="December">December</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="tg-select">
+													<select class="selectpicker" data-live-search="true" data-width="100%">
+														<option data-tokens="Duration">Duration</option>
+														<option data-tokens="2 weeks">2 weeks</option>
+														<option data-tokens="3 weeks">3 weeks</option>
+														<option data-tokens="4 weeks">4 weeks</option>
+														<option data-tokens="5 weeks">5 weeks</option>
+														<option data-tokens="6 weeks">6 weeks</option>
+														<option data-tokens="7 weeks">7 weeks</option>
+														<option data-tokens="8 weeks">8 weeks</option>
+														<option data-tokens="9 weeks">9 weeks</option>
+														<option data-tokens="10 weeks">10 weeks</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<button class="tg-btn" type="submit"><span>find tours</span></button>
+											</div>
+										</fieldset>
+									</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>";s:4:"code";N;s:18:"builderList editor";a:8:{s:10:"modelClass";s:26:"Aero\Manager\Models\Editor";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

@@ -1,0 +1,11 @@
+name: Packs
+modelClass: Aero\Manager\Models\Packs
+form: $/aero/manager/models/packs/fields.yaml
+defaultRedirect: aero/manager/packs
+create:
+    redirect: 'aero/manager/packs/update/:id'
+    redirectClose: aero/manager/packs
+update:
+    redirect: aero/manager/packs
+    redirectClose: aero/manager/packs
+preview: {  }

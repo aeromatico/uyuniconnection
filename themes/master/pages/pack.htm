@@ -1,0 +1,186 @@
+title = "Pack"
+url = "/pack/:slug"
+layout = "master"
+is_hidden = 0
+
+[builderDetails pack]
+modelClass = "Aero\Manager\Models\Packs"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "id"
+displayColumn = "id"
+notFoundMessage = "Record not found"
+
+[viewBag]
+localeUrl[es] = "/pack"
+==
+{% set p = pack.record %}
+
+	<div class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{{p.bg.getPath}}">
+		<div class="tg-sectionspace tg-haslayout">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+<main id="tg-main" class="tg-main tg-haslayout">
+    <div class="container">
+    	<div class="row">
+    		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    			<div id="tg-content" class="tg-content">
+    				<div class="tg-tourbookingdetail">
+    					<div class="tg-bookinginfo">
+    						<h2>{{p.name}}</h2>
+    						
+    						<div class="tg-description">
+    							<p>{{p.subtitle}}</p>
+    						</div>
+    						
+    						<div class="tg-pricearea">
+    							<span>From</span>
+    							<del>{{p.pricing + 500}}</del>
+    							<h4>${{p.pricing}}</h4>
+    						</div>
+
+
+    						<ul class="tg-tripinfo">
+    							<li><span class="tg-tourduration">4 days, 3 nights</span></li>
+    							<li><span class="tg-tourduration tg-availabilty">Availaible</span></li>
+    							<li><span class="tg-tourduration tg-location">Uyuni</span></li>
+    							<li><span class="tg-tourduration tg-peoples">Shared</span></li>
+    						</ul>
+    						<div class="tg-refundshare">
+    							<div class="tg-refund">
+    								<figure><img src="{{'assets/img/img-03.jpg' | theme }}" alt="image description"></figure>
+    								<div class="tg-refundinfo">
+    									<h3>100% refundable</h3>
+    									<div class="tg-description">
+    										<p>Cancel up to 12 days before your trip and get a full refund, including service fees.</p>
+    									</div>
+    								</div>
+    							</div>
+    							<ul class="tg-likeshare">
+    								<li class="tg-shareicon">
+    									<a href="javascript:void(0);"><i class="icon-share-button-outline"></i>share</a>
+    									<ul class="tg-share">
+    										<li><a href="javascript:void(0);"><i class="icon-twitter"></i></a></li>
+    										<li><a href="javascript:void(0);"><i class="icon-facebook"></i></a></li>
+    										<li><a href="javascript:void(0);"><i class="icon-pinterest"></i></a></li>
+    									</ul>
+    								</li>    	
+    								<li><a href="javascript:void(0);"><i class="icon-eye"></i>3520</a></li>
+    							</ul>
+    						</div>
+    					</div>
+    					<div class="tg-sectionspace tg-haslayout">
+    						<div class="tg-themetabs tg-bookingtabs">
+    							<ul class="tg-themetabnav" role="tablist">
+    								<li role="presentation" class="active">
+    									<a href="#america" aria-controls="america" role="tab" data-toggle="tab">
+    										<span>Overview</span>
+    									</a>
+    								</li>
+    								<li role="presentation">
+    									<a href="#australia" aria-controls="australia" role="tab" data-toggle="tab">
+    										<span>Itinerary</span>
+    									</a>
+    								</li>
+    								<li role="presentation">
+    									<a href="#italy" aria-controls="italy" role="tab" data-toggle="tab">
+    										<span>location</span>
+    									</a>
+    								</li>
+
+    								<li role="presentation">
+    									<a href="#india" aria-controls="india" role="tab" data-toggle="tab">
+    										<span>Gallery</span>
+    									</a>
+    								</li>
+    							</ul>
+    							<div class="tab-content tg-themetabcontent">
+    								<div role="tabpanel" class="tab-pane active tg-overviewtab" id="america">
+    									<div class="tg-bookingdetail">
+    										<div class="tg-box">
+    											<h2>About this tour</h2>
+    											<div class="tg-description">
+    												<p>{{p.description | raw}}</p>
+    											</div>
+    										</div>
+    									</div>
+    									<div class="tg-bookingdetail tg-bookingdetailstyle">
+    							
+    											<h3>Services (Shared)</h3>
+    											<div class="tg-content">
+    												<p>{{p.services_shared |raw}}</p>
+    											</div>
+    				
+    									</div>
+    									<div class="tg-bookingdetail tg-bookingdetailstyle">
+    							
+    											<h3>Services (Private)</h3>
+    											<div class="tg-content">
+    												<p>{{p.services_private |raw}}</p>
+    											</div>
+    							
+    									</div>
+    								</div>
+    								<div role="tabpanel" class="tab-pane tg-itinerary" id="australia">
+    							
+    										<div class="tg-box">
+    											<div class="tg-accordion" role="tablist" aria-multiselectable="true">
+    											
+    											    {% for c in p.itinerary %}
+    												<div class="tg-panel">
+    													<h4>{{c.title}}<span>Lorem ipsum dolor sit amet consectetuer.</span></h4>
+    													<div class="tg-panelcontent">
+    														<div class="tg-description">
+    															<p>{{c.description |raw}}</p>
+    														</div>
+    													</div>
+    												</div>
+    												{% endfor %}
+
+    											</div>
+    										</div>
+    								
+    								</div>
+    								<div role="tabpanel" class="tab-pane tg-locationtab" id="italy">
+    									<div class="tg-box tg-location">
+    										<h3>The neighborhood</h3>
+    										<div class="tg-description">
+    											<p>Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis
+    euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    										</div>
+    										<div id="tg-locationmap" class="tg-locationmap tg-map"></div>
+    									</div>
+    								</div>
+
+    								<div role="tabpanel" class="tab-pane tg-gallerytab" id="india">
+    									<div class="tg-gallery">
+    										<ul>
+    										
+    										    {% for c in p.gallery %}
+    											<li>
+    												<figure>
+    													<a href="{{c.getPath}}" data-rel="prettyPhoto[instagram]">
+    														<img src="{{c.getPath}}" alt="image decruoton">
+    													</a>
+    												</figure>
+    											</li>
+    											{% endfor %}
+
+    										</ul>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+</main>

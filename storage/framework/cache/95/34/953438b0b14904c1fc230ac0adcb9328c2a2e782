@@ -1,0 +1,266 @@
+1556058320a:1:{s:9:"about.htm";a:10:{s:8:"fileName";s:9:"about.htm";s:7:"content";s:5289:"title = "About us"
+url = "/about"
+layout = "master"
+is_hidden = 0
+
+[builderList editor]
+modelClass = "Aero\Manager\Models\Editor"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set e = editor.records[0] %}
+
+<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{{e.about_bg.getPath}}">
+	<div class="tg-sectionspace tg-haslayout">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1>{{e.about_title}}</h1>
+					<h2>{{e.about_subtitle}}</h2>
+					<ol class="tg-breadcrumb">
+						<li><a href="./?ref=nav">{{'Home' |_}}</a></li>
+						<li class="tg-active">{{e.about_title}}</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<main id="tg-main" class="tg-main tg-haslayout">
+
+<!--************************************
+					About Us Start
+			*************************************-->
+			<section class="tg-aboutus">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="row">
+						<figure data-vide-bg="poster: {{e.about_image1.getPath}}" data-vide-options="position: 0% 50%"></figure>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="row">
+						<div class="tg-textbox">
+							<div class="tg-sectiontitle">
+								<h2>{{'Mission'|_}}</h2>
+							</div>
+							<div class="tg-description">
+								<p>
+								{{e.about_mission |raw}}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right">
+					<div class="row">
+						<figure data-vide-bg="poster: {{e.about_image2.getPath}}" data-vide-options="position: 0% 50%"></figure>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
+					<div class="row">
+						<div class="tg-textbox">
+							<div class="tg-sectiontitle">
+								<h2>{{'Vision'|_}}</h2>
+							</div>
+							<div class="tg-description">
+								<p>
+								{{e.about_vision |raw}}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--************************************
+					About Us End
+			*************************************-->
+			<!--************************************
+					FAQs Start
+			*************************************-->
+			<section class="tg-sectionspace tg-haslayout tg-bglight">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							
+								<div class="tg-sectionhead">
+									<div class="tg-sectiontitle">
+										<h2>Need Help?</h2>
+									</div>
+									<div class="tg-description">
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam consectetuer.</p>
+									</div>
+								</div>
+								<div id="tg-accordion" class="tg-accordion" role="tablist" aria-multiselectable="true">
+									<div class="tg-panel">
+										<h4>Ornare Quam Justo Tellusv</h4>
+										<div class="tg-panelcontent">
+											<div class="tg-description">
+												<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+											</div>
+										</div>
+									</div>
+									<div class="tg-panel">
+										<h4>A work of art is above all an adventure of mind!</h4>
+										<div class="tg-panelcontent">
+											<div class="tg-description">
+												<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+											</div>
+										</div>
+									</div>
+									<div class="tg-panel">
+										<h4>Pharetra Etiam Inceptos</h4>
+										<div class="tg-panelcontent">
+											<div class="tg-description">
+												<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+											</div>
+										</div>
+									</div>
+									<div class="tg-panel">
+										<h4>We pride ourselves on innovative.</h4>
+										<div class="tg-panelcontent">
+											<div class="tg-description">
+												<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--************************************
+					FAQs End
+			*************************************-->
+</main>";s:5:"mtime";i:1556033859;s:6:"markup";s:4985:"{% set e = editor.records[0] %}
+
+<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{{e.about_bg.getPath}}">
+	<div class="tg-sectionspace tg-haslayout">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1>{{e.about_title}}</h1>
+					<h2>{{e.about_subtitle}}</h2>
+					<ol class="tg-breadcrumb">
+						<li><a href="./?ref=nav">{{'Home' |_}}</a></li>
+						<li class="tg-active">{{e.about_title}}</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<main id="tg-main" class="tg-main tg-haslayout">
+
+<!--************************************
+					About Us Start
+			*************************************-->
+			<section class="tg-aboutus">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="row">
+						<figure data-vide-bg="poster: {{e.about_image1.getPath}}" data-vide-options="position: 0% 50%"></figure>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="row">
+						<div class="tg-textbox">
+							<div class="tg-sectiontitle">
+								<h2>{{'Mission'|_}}</h2>
+							</div>
+							<div class="tg-description">
+								<p>
+								{{e.about_mission |raw}}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right">
+					<div class="row">
+						<figure data-vide-bg="poster: {{e.about_image2.getPath}}" data-vide-options="position: 0% 50%"></figure>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
+					<div class="row">
+						<div class="tg-textbox">
+							<div class="tg-sectiontitle">
+								<h2>{{'Vision'|_}}</h2>
+							</div>
+							<div class="tg-description">
+								<p>
+								{{e.about_vision |raw}}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--************************************
+					About Us End
+			*************************************-->
+			<!--************************************
+					FAQs Start
+			*************************************-->
+			<section class="tg-sectionspace tg-haslayout tg-bglight">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							
+								<div class="tg-sectionhead">
+									<div class="tg-sectiontitle">
+										<h2>Need Help?</h2>
+									</div>
+									<div class="tg-description">
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam consectetuer.</p>
+									</div>
+								</div>
+								<div id="tg-accordion" class="tg-accordion" role="tablist" aria-multiselectable="true">
+									<div class="tg-panel">
+										<h4>Ornare Quam Justo Tellusv</h4>
+										<div class="tg-panelcontent">
+											<div class="tg-description">
+												<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+											</div>
+										</div>
+									</div>
+									<div class="tg-panel">
+										<h4>A work of art is above all an adventure of mind!</h4>
+										<div class="tg-panelcontent">
+											<div class="tg-description">
+												<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+											</div>
+										</div>
+									</div>
+									<div class="tg-panel">
+										<h4>Pharetra Etiam Inceptos</h4>
+										<div class="tg-panelcontent">
+											<div class="tg-description">
+												<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+											</div>
+										</div>
+									</div>
+									<div class="tg-panel">
+										<h4>We pride ourselves on innovative.</h4>
+										<div class="tg-panelcontent">
+											<div class="tg-description">
+												<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--************************************
+					FAQs End
+			*************************************-->
+</main>";s:4:"code";N;s:5:"title";s:8:"About us";s:3:"url";s:6:"/about";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:18:"builderList editor";a:8:{s:10:"modelClass";s:26:"Aero\Manager\Models\Editor";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

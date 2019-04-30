@@ -1,0 +1,88 @@
+title = "Services"
+url = "/services"
+layout = "master"
+is_hidden = 0
+
+[builderList editor]
+modelClass = "Aero\Manager\Models\Editor"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set e = editor.records[0] %}
+
+<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{{e.services_bg.getPath}}">
+	<div class="tg-sectionspace tg-haslayout">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1>{{e.services_title}}</h1>
+					<h2>{{e.services_subtitle}}</h2>
+					<ol class="tg-breadcrumb">
+						<li><a href="./?ref=nav">{{'Home' |_}}</a></li>
+						<li class="tg-active">{{e.services_title}}</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<main id="tg-main" class="tg-main tg-haslayout">
+
+<!--************************************
+			Features Start
+	*************************************-->
+	<section class="tg-sectionspace tg-haslayout">
+		<div class="container">
+			<div class="row">
+				<div class="tg-features">
+				
+				    {% for c in e.services %}
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="tg-feature">
+							<div class="tg-featuretitle">
+								<h2><span>0{{loop.index}}</span><a href="javascript:void(0);">{{c.title}}</a></h2>
+							</div>
+							<div class="tg-description">
+								<p>{{c.description}}</p>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--************************************
+			Features End
+	*************************************-->
+	<!--************************************
+			Call To Action Start
+	*************************************-->
+	<section class="tg-parallax" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{{e.services_bg2.getPath}}">
+		<div class="tg-sectionspace tg-haslayout">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="tg-calltoaction">
+							<div class="tg-pattern"><img src="{{'assets/img/patternw.png' | theme }}" alt="image destination"></div>
+							<h2>Get 10% Off on your Next Travel</h2>
+							<div class="tg-description"><p>Travel between 22 April to 21 May and get existing offers along with a sure 10% cash discount</p></div>
+							<a class="tg-btn" href="javascript:void(0);"><span>Explore Tour</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--************************************
+			Call To Action End
+	*************************************-->
+	
+</main>

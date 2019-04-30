@@ -1,0 +1,26 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table aero_manager_editor'
+    - builder_table_create_aero_manager_editor.php
+1.0.3:
+    - 'Updated table aero_manager_editor'
+    - builder_table_update_aero_manager_editor.php
+1.0.4:
+    - 'Updated table aero_manager_editor'
+    - builder_table_update_aero_manager_editor_2.php
+1.0.5:
+    - 'Updated table aero_manager_editor'
+    - builder_table_update_aero_manager_editor_3.php
+1.0.6:
+    - 'Created table aero_manager_packs'
+    - builder_table_create_aero_manager_packs.php
+1.0.7:
+    - 'Updated table aero_manager_packs'
+    - builder_table_update_aero_manager_packs.php
+1.0.8:
+    - 'Updated table aero_manager_packs'
+    - builder_table_update_aero_manager_packs_2.php
+1.0.9:
+    - 'Updated table aero_manager_packs'
+    - builder_table_update_aero_manager_packs_3.php

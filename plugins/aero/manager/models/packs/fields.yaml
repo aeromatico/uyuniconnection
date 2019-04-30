@@ -1,0 +1,71 @@
+fields:
+    name:
+        label: Nombre
+        span: auto
+        type: text
+    slug:
+        label: Identificador
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    subtitle:
+        label: Subtítulo
+        span: auto
+        type: text
+    pricing:
+        label: Pricing
+        span: auto
+        type: number
+    bg:
+        label: 'Imagen de fondo'
+        mode: image
+        imageWidth: '300'
+        imageHeight: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    description:
+        label: Descripción
+        size: huge
+        span: full
+        type: richeditor
+    services_shared:
+        label: 'Servicios compartidos'
+        size: large
+        span: auto
+        type: richeditor
+    services_private:
+        label: 'Servicios privados'
+        size: large
+        span: auto
+        type: richeditor
+    itinerary:
+        label: Itinerario
+        prompt: Nuevo
+        span: full
+        type: repeater
+        form:
+            fields:
+                title:
+                    label: Título
+                    span: auto
+                    type: text
+                description:
+                    label: Descripción
+                    size: ''
+                    span: auto
+                    type: richeditor
+    gallery:
+        label: 'Galería de imágenes'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
