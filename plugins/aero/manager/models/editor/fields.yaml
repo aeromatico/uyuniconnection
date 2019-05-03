@@ -143,3 +143,60 @@ tabs:
             span: auto
             type: fileupload
             tab: Servicios
+        home_features:
+            label: 'Características destacadas'
+            prompt: Nuevo
+            span: full
+            type: repeater
+            tab: Portada
+            form:
+                fields:
+                    title:
+                        label: Título
+                        span: auto
+                        type: text
+                    description:
+                        label: Descripción
+                        size: ''
+                        span: auto
+                        type: textarea
+        home_features_bg:
+            label: 'Fondo de sección'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Portada
+        tours_bg:
+            label: 'Fondo de sección'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Tours
+        destinations_bg:
+            label: 'Fondo de sección'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Destinos
+        contact_bg:
+            label: 'Imagen de fondo'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Contacto

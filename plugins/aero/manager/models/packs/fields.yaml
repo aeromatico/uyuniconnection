@@ -18,11 +18,50 @@ fields:
         label: Pricing
         span: auto
         type: number
+    avalaible:
+        label: Disponibilidad
+        span: auto
+        default: 1
+        type: switch
+    type:
+        label: 'Tipo de tour'
+        options:
+            Shared: Compartido
+            Private: Privado
+        span: auto
+        type: balloon-selector
+    days:
+        label: 'Días de tours'
+        options:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+            5: '5'
+            6: '6'
+            7: '7'
+            10: '10'
+            14: '14'
+            30: '30'
+        showSearch: true
+        span: left
+        type: dropdown
+        commentAbove: 'Se contarán las noches automáticamente'
+    image:
+        label: Imagen
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        imageWidth: '400'
+        type: fileupload
     bg:
         label: 'Imagen de fondo'
         mode: image
-        imageWidth: '300'
-        imageHeight: '200'
+        imageWidth: '400'
+        imageHeight: '300'
         useCaption: true
         thumbOptions:
             mode: crop

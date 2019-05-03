@@ -1,5 +1,30 @@
+[builderList menuPacks]
+modelClass = "Aero\Manager\Models\Packs"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 3
+pageNumber = "{{ :page }}"
+
+[builderList packs]
+modelClass = "Aero\Manager\Models\Packs"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 6
+pageNumber = "{{ :page }}"
 ==
-<nav id="tg-nav" class="tg-nav">
+{% set packs = packs.records %}      
+{% set menuPacks = menuPacks.records %}        
+        
+        
+        <nav id="tg-nav" class="tg-nav">
 							<div class="navbar-header">
 								<a href="#menu" class="navbar-toggle collapsed">
 									<span class="sr-only">Toggle navigation</span>
@@ -11,85 +36,39 @@
 							<div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
 								<ul>
 									<li><a href="{{app}}/?ref=main-menu">{{ 'home'|_ }}</a></li>
-									<li><a href="destinations.html">{{ 'destinations'|_ }}</a></li>
+									<li><a href="{{app}}/destinations">{{ 'destinations'|_ }}</a></li>
 									<li><a href="{{app}}/services">{{ 'services'|_ }}</a></li>
 									<li class="menu-item-has-children menu-item-has-mega-menu"><a href="javascript:void(0);">tours</a>
 										<div class="mega-menu">
 											<ul>
-												<li><a href="listingvone.html">list style one</a></li>
-												<li><a href="listingvtwo.html">list style two</a></li>
-												<li><a href="listingvthree.html">list style three</a></li>
-												<li><a href="listingvfour.html">list style four</a></li>
-												<li><a href="listingvfive.html">list style five</a></li>
-												<li><a href="listingvsix.html">list style six</a></li>
+											    {% for c in packs %}
+												<li><a href="{{app}}/tours/{{c.slug}}">{{c.name}}</a></li>
+                                                {% endfor %}
 											</ul>
 											<div class="tg-sliderarea">
-												<h2>Popular Tours</h2>
+												<h2>{{'Featured packs' | _}}</h2>
 												<div class="tg-trendingtripsslider tg-trendingtrips owl-carousel">
+												
+												    {% for c in menuPacks %}
 													<div class="item tg-trendingtrip">
 														<figure>
-															<a href="javascript:void(0);">
-																<img src="{{'assets/img/tours/img-05.jpg' | theme }}" alt="image destinations">
+															<a href="{{app}}/tours/{{c.slug}}">
+																<img src="{{ c.image.getPath | resize(235, 170) }}" alt="{{ c.name }}">
 																<div class="tg-hover">
 																	<span class="tg-stars"><span></span></span>
-																	<span class="tg-tourduration">7 Days</span>
-																	<span class="tg-locationname">Paris</span>
+																	<span class="tg-tourduration">{{c.days}} {{'days' |_}}, {{c.days - 1}} {{'nights' |_}}</span>
+																	<span class="tg-locationname">{% if c.avalaible == 1 %} {{'Avalaible' | _}} {% else %} {{'Not avalaible' | _}} {% endif %}</span>
 																	<div class="tg-pricearea">
-																		<span>from</span>
-																		<h4>$600</h4>
+																		<span>{{c.name}}</span>
+																		<h4>${{c.pricing}}</h4>
 																	</div>
 																</div>
 															</a>
 														</figure>
 													</div>
-													<div class="item tg-trendingtrip">
-														<figure>
-															<a href="javascript:void(0);">
-																<img src="{{'assets/img/tours/img-06.jpg' | theme }}" alt="image destinations">
-																<div class="tg-hover">
-																	<span class="tg-stars"><span></span></span>
-																	<span class="tg-tourduration">7 Days</span>
-																	<span class="tg-locationname">Paris</span>
-																	<div class="tg-pricearea">
-																		<span>from</span>
-																		<h4>$600</h4>
-																	</div>
-																</div>
-															</a>
-														</figure>
-													</div>
-													<div class="item tg-trendingtrip">
-														<figure>
-															<a href="javascript:void(0);">
-																<img src="{{'assets/img/tours/img-07.jpg' | theme }}" alt="image destinations">
-																<div class="tg-hover">
-																	<span class="tg-stars"><span></span></span>
-																	<span class="tg-tourduration">7 Days</span>
-																	<span class="tg-locationname">Paris</span>
-																	<div class="tg-pricearea">
-																		<span>from</span>
-																		<h4>$600</h4>
-																	</div>
-																</div>
-															</a>
-														</figure>
-													</div>
-													<div class="item tg-trendingtrip">
-														<figure>
-															<a href="javascript:void(0);">
-																<img src="{{'assets/img/tours/img-08.jpg' | theme }}" alt="image destinations">
-																<div class="tg-hover">
-																	<span class="tg-stars"><span></span></span>
-																	<span class="tg-tourduration">7 Days</span>
-																	<span class="tg-locationname">Paris</span>
-																	<div class="tg-pricearea">
-																		<span>from</span>
-																		<h4>$600</h4>
-																	</div>
-																</div>
-															</a>
-														</figure>
-													</div>
+													{% endfor %}
+
+
 												</div>
 											</div>
 										</div>

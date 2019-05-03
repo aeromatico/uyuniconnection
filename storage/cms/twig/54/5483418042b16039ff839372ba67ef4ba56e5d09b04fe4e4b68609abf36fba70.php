@@ -93,24 +93,16 @@ class __TwigTemplate_99e2179b151b0bb99e3a38d563305938acba0bc2c514a2cc3d5cf697c9c
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 36
         echo "\t\t\t</div>
-\t\t\t<div class=\"tg-findtour tg-nobackground\">
+\t\t\t<div class=\"tg-findtour tg-nobackground\" style=\"display: none\">
 \t\t\t\t<div class=\"container\">
 \t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">
 \t\t\t\t\t\t\t<form class=\"tg-formtheme tg-formtrip\">
 \t\t\t\t\t\t\t\t\t\t<fieldset>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"tg-select\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<select class=\"selectpicker\" data-live-search=\"true\" data-width=\"100%\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option data-tokens=\"Destinations\">Destinations</option>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option data-tokens=\"All Areas\">All Areas</option>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option data-tokens=\"Bayonne\">Bayonne</option>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option data-tokens=\"Greenville\">Greenville</option>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option data-tokens=\"Manhattan\">Manhattan</option>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option data-tokens=\"Queens\">Queens</option>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option data-tokens=\"The Heights\">The Heights</option>
-\t\t\t\t\t\t\t\t\t\t\t\t\t</select>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" class=\"selectpicker\" style=\"width: 100%\"></input>
+\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"tg-select\">
@@ -222,24 +214,16 @@ class __TwigTemplate_99e2179b151b0bb99e3a38d563305938acba0bc2c514a2cc3d5cf697c9c
 \t\t\t\t</figure>
 \t\t\t\t{% endfor %}
 \t\t\t</div>
-\t\t\t<div class=\"tg-findtour tg-nobackground\">
+\t\t\t<div class=\"tg-findtour tg-nobackground\" style=\"display: none\">
 \t\t\t\t<div class=\"container\">
 \t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">
 \t\t\t\t\t\t\t<form class=\"tg-formtheme tg-formtrip\">
 \t\t\t\t\t\t\t\t\t\t<fieldset>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"tg-select\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<select class=\"selectpicker\" data-live-search=\"true\" data-width=\"100%\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option data-tokens=\"Destinations\">Destinations</option>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option data-tokens=\"All Areas\">All Areas</option>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option data-tokens=\"Bayonne\">Bayonne</option>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option data-tokens=\"Greenville\">Greenville</option>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option data-tokens=\"Manhattan\">Manhattan</option>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option data-tokens=\"Queens\">Queens</option>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option data-tokens=\"The Heights\">The Heights</option>
-\t\t\t\t\t\t\t\t\t\t\t\t\t</select>
-\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" class=\"selectpicker\" style=\"width: 100%\"></input>
+\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"tg-select\">

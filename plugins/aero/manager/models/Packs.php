@@ -26,7 +26,8 @@ class Packs extends Model
     ];
     
     public $attachOne = [
-        'bg' => 'System\Models\File',
+        'bg'    => 'System\Models\File',
+        'image' => 'System\Models\File'
     ];   
     
     public $attachMany = [

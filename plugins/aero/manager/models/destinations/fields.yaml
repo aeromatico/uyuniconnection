@@ -1,0 +1,42 @@
+fields:
+    name:
+        label: 'Nombre de destino'
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    image:
+        label: 'Imagen principal'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        imageWidth: '400'
+        imageHeight: '300'
+        type: fileupload
+    youtube:
+        label: 'ID de vídeo en Youtube'
+        span: auto
+        type: text
+        commentAbove: 'Por ejemplo la ID del video https://www.youtube.com/watch?v=xtfxTWM9sgg es xtfxTWM9sgg'
+    description:
+        label: Descripción
+        size: huge
+        span: full
+        type: richeditor
+    gallery:
+        label: 'Galería fotográfica'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

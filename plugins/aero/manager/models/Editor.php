@@ -27,7 +27,7 @@ class Editor extends Model
     public $rules = [
     ];
     
-    protected $jsonable = ['slider', 'about_faqs', 'services'];
+    protected $jsonable = ['slider', 'about_faqs', 'services', 'home_features'];
     
     public $attachOne = [
         'about_image1' => 'System\Models\File',
@@ -35,5 +35,9 @@ class Editor extends Model
         'about_bg'     => 'System\Models\File',
         'services_bg'  => 'System\Models\File',
         'services_bg2' => 'System\Models\File',
+        'home_features_bg' => 'System\Models\File',
+        'destinations_bg' => 'System\Models\File',
+        'tours_bg' => 'System\Models\File',
+        'contact_bg' => 'System\Models\File',
     ];    
 }

@@ -1,7 +1,10 @@
-1556058320a:1:{s:8:"pack.htm";a:11:{s:8:"fileName";s:8:"pack.htm";s:7:"content";s:6782:"title = "Pack"
+1556902579a:1:{s:8:"pack.htm";a:11:{s:8:"fileName";s:8:"pack.htm";s:7:"content";s:7086:"title = "Pack"
 url = "/pack/:slug"
 layout = "master"
 is_hidden = 0
+
+[viewBag]
+localeUrl[es] = "/pack"
 
 [builderDetails pack]
 modelClass = "Aero\Manager\Models\Packs"
@@ -9,9 +12,6 @@ identifierValue = "{{ :slug }}"
 modelKeyColumn = "id"
 displayColumn = "id"
 notFoundMessage = "Record not found"
-
-[viewBag]
-localeUrl[es] = "/pack"
 ==
 {% set p = pack.record %}
 
@@ -46,10 +46,11 @@ localeUrl[es] = "/pack"
 
 
     						<ul class="tg-tripinfo">
-    							<li><span class="tg-tourduration">4 days, 3 nights</span></li>
-    							<li><span class="tg-tourduration tg-availabilty">Availaible</span></li>
+    							<li><span class="tg-tourduration">{{p.days}} {{'days' |_}}, {{p.days - 1}}, {{'nights' |_}}
+    							   </span></li>
+    							<li><span class="tg-tourduration tg-availabilty">{% if p.avalaible == 1 %} {{'Avalaible' | _}} {% else %} {{'Not avalaible' | _}} {% endif %}</span></li>
     							<li><span class="tg-tourduration tg-location">Uyuni</span></li>
-    							<li><span class="tg-tourduration tg-peoples">Shared</span></li>
+    							<li><span class="tg-tourduration tg-peoples">{% if p.type == 'Private' %} {{'Private' | _}} {% else %} {{'Shared' | _}} {% endif %}</span></li>
     						</ul>
     						<div class="tg-refundshare">
     							<div class="tg-refund">
@@ -70,7 +71,7 @@ localeUrl[es] = "/pack"
     										<li><a href="javascript:void(0);"><i class="icon-pinterest"></i></a></li>
     									</ul>
     								</li>    	
-    								<li><a href="javascript:void(0);"><i class="icon-eye"></i>3520</a></li>
+<!--                                     <li><a href="javascript:void(0);"><i class="icon-eye"></i>3520</a></li> -->
     							</ul>
     						</div>
     					</div>
@@ -165,7 +166,7 @@ localeUrl[es] = "/pack"
     											<li>
     												<figure>
     													<a href="{{c.getPath}}" data-rel="prettyPhoto[instagram]">
-    														<img src="{{c.getPath}}" alt="image decruoton">
+    														<img src="{{c.getPath | resize(350, 350) }}" alt="{{p.name}}" style="height: 350px; width: 350px;">
     													</a>
     												</figure>
     											</li>
@@ -183,7 +184,7 @@ localeUrl[es] = "/pack"
     	</div>
     </div>
 
-</main>";s:5:"mtime";i:1556054617;s:6:"markup";s:6501:"{% set p = pack.record %}
+</main>";s:5:"mtime";i:1556839464;s:6:"markup";s:6805:"{% set p = pack.record %}
 
 	<div class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{{p.bg.getPath}}">
 		<div class="tg-sectionspace tg-haslayout">
@@ -216,10 +217,11 @@ localeUrl[es] = "/pack"
 
 
     						<ul class="tg-tripinfo">
-    							<li><span class="tg-tourduration">4 days, 3 nights</span></li>
-    							<li><span class="tg-tourduration tg-availabilty">Availaible</span></li>
+    							<li><span class="tg-tourduration">{{p.days}} {{'days' |_}}, {{p.days - 1}}, {{'nights' |_}}
+    							   </span></li>
+    							<li><span class="tg-tourduration tg-availabilty">{% if p.avalaible == 1 %} {{'Avalaible' | _}} {% else %} {{'Not avalaible' | _}} {% endif %}</span></li>
     							<li><span class="tg-tourduration tg-location">Uyuni</span></li>
-    							<li><span class="tg-tourduration tg-peoples">Shared</span></li>
+    							<li><span class="tg-tourduration tg-peoples">{% if p.type == 'Private' %} {{'Private' | _}} {% else %} {{'Shared' | _}} {% endif %}</span></li>
     						</ul>
     						<div class="tg-refundshare">
     							<div class="tg-refund">
@@ -240,7 +242,7 @@ localeUrl[es] = "/pack"
     										<li><a href="javascript:void(0);"><i class="icon-pinterest"></i></a></li>
     									</ul>
     								</li>    	
-    								<li><a href="javascript:void(0);"><i class="icon-eye"></i>3520</a></li>
+<!--                                     <li><a href="javascript:void(0);"><i class="icon-eye"></i>3520</a></li> -->
     							</ul>
     						</div>
     					</div>
@@ -335,7 +337,7 @@ localeUrl[es] = "/pack"
     											<li>
     												<figure>
     													<a href="{{c.getPath}}" data-rel="prettyPhoto[instagram]">
-    														<img src="{{c.getPath}}" alt="image decruoton">
+    														<img src="{{c.getPath | resize(350, 350) }}" alt="{{p.name}}" style="height: 350px; width: 350px;">
     													</a>
     												</figure>
     											</li>
@@ -353,4 +355,4 @@ localeUrl[es] = "/pack"
     	</div>
     </div>
 
-</main>";s:4:"code";N;s:5:"title";s:4:"Pack";s:3:"url";s:11:"/pack/:slug";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:19:"builderDetails pack";a:5:{s:10:"modelClass";s:25:"Aero\Manager\Models\Packs";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:2:"id";s:13:"displayColumn";s:2:"id";s:15:"notFoundMessage";s:16:"Record not found";}s:7:"viewBag";a:1:{s:9:"localeUrl";a:1:{s:2:"es";s:5:"/pack";}}}}
+</main>";s:4:"code";N;s:5:"title";s:4:"Pack";s:3:"url";s:11:"/pack/:slug";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:7:"viewBag";a:1:{s:9:"localeUrl";a:1:{s:2:"es";s:5:"/pack";}}s:19:"builderDetails pack";a:5:{s:10:"modelClass";s:25:"Aero\Manager\Models\Packs";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:2:"id";s:13:"displayColumn";s:2:"id";s:15:"notFoundMessage";s:16:"Record not found";}}}

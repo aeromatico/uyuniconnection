@@ -1,0 +1,11 @@
+name: Destinations
+modelClass: Aero\Manager\Models\Destinations
+form: $/aero/manager/models/destinations/fields.yaml
+defaultRedirect: aero/manager/destinations
+create:
+    redirect: 'aero/manager/destinations/update/:id'
+    redirectClose: aero/manager/destinations
+update:
+    redirect: aero/manager/destinations
+    redirectClose: aero/manager/destinations
+preview: {  }

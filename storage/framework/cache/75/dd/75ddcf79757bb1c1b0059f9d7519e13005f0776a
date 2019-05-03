@@ -1,0 +1,218 @@
+1556911258a:1:{s:9:"tours.htm";a:10:{s:8:"fileName";s:9:"tours.htm";s:7:"content";s:4067:"title = "Tours"
+url = "/tours"
+layout = "master"
+is_hidden = 0
+
+[builderList editor]
+modelClass = "Aero\Manager\Models\Editor"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set e = editor.records[0] %}
+
+
+<!--************************************
+				Inner Banner Start
+		*************************************-->
+		<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="images/parallax/bgparallax-05.jpg">
+			<div class="tg-sectionspace tg-haslayout">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<h1>Package Plans</h1>
+							<h2>Donec id elit non mi porta gravida at eget metus</h2>
+							<ol class="tg-breadcrumb">
+								<li><a href="javascript:void(0);">Home</a></li>
+								<li class="tg-active">Packages Plans</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--************************************
+				Inner Banner End
+		*************************************-->
+		<!--************************************
+				Main Start
+		*************************************-->
+		<main id="tg-main" class="tg-main tg-sectionspace tg-haslayout">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div id="tg-content" class="tg-content">
+							<div class="tg-pkgplans">
+								<div class="row">
+									<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+										<div class="tg-pkgplan">
+											<div class="tg-pkgplantitle">
+												<h2>Personal</h2>
+											</div>
+											<ul class="tg-pkgplanoptions">
+												<li>24/7 Free Tech Support</li>
+												<li>2GB Bandwidth Available</li>
+												<li>Unlimited User Access</li>
+												<li>24/7 Free Tech Support</li>
+												<li>200GB Storage Space</li>
+												<li>Unlimited User Access</li>
+											</ul>
+											<div class="tg-pkgplanfoot">
+												<a class="tg-btn" href="javascript:void(0);"><span>contact now</span></a>
+												<span class="tg-pkgplanprice"><sup>$</sup>79</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+										<div class="tg-pkgplan">
+											<div class="tg-pkgplantitle">
+												<h2>Group</h2>
+											</div>
+											<ul class="tg-pkgplanoptions">
+												<li>24/7 Free Tech Support</li>
+												<li>2GB Bandwidth Available</li>
+												<li>Unlimited User Access</li>
+												<li>24/7 Free Tech Support</li>
+												<li>200GB Storage Space</li>
+												<li>Unlimited User Access</li>
+											</ul>
+											<div class="tg-pkgplanfoot">
+												<a class="tg-btn" href="javascript:void(0);"><span>contact now</span></a>
+												<span class="tg-pkgplanprice"><sup>$</sup>130</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+										<div class="tg-pkgplan">
+											<div class="tg-pkgplantitle">
+												<h2>Wedding Session</h2>
+											</div>
+											<ul class="tg-pkgplanoptions">
+												<li>24/7 Free Tech Support</li>
+												<li>2GB Bandwidth Available</li>
+												<li>Unlimited User Access</li>
+												<li>24/7 Free Tech Support</li>
+												<li>200GB Storage Space</li>
+												<li>Unlimited User Access</li>
+											</ul>
+											<div class="tg-pkgplanfoot">
+												<a class="tg-btn" href="javascript:void(0);"><span>contact now</span></a>
+												<span class="tg-pkgplanprice"><sup>$</sup>195</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--************************************
+				Main End
+		*************************************-->";s:5:"mtime";i:1556907054;s:6:"markup";s:3766:"{% set e = editor.records[0] %}
+
+
+<!--************************************
+				Inner Banner Start
+		*************************************-->
+		<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="images/parallax/bgparallax-05.jpg">
+			<div class="tg-sectionspace tg-haslayout">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<h1>Package Plans</h1>
+							<h2>Donec id elit non mi porta gravida at eget metus</h2>
+							<ol class="tg-breadcrumb">
+								<li><a href="javascript:void(0);">Home</a></li>
+								<li class="tg-active">Packages Plans</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--************************************
+				Inner Banner End
+		*************************************-->
+		<!--************************************
+				Main Start
+		*************************************-->
+		<main id="tg-main" class="tg-main tg-sectionspace tg-haslayout">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div id="tg-content" class="tg-content">
+							<div class="tg-pkgplans">
+								<div class="row">
+									<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+										<div class="tg-pkgplan">
+											<div class="tg-pkgplantitle">
+												<h2>Personal</h2>
+											</div>
+											<ul class="tg-pkgplanoptions">
+												<li>24/7 Free Tech Support</li>
+												<li>2GB Bandwidth Available</li>
+												<li>Unlimited User Access</li>
+												<li>24/7 Free Tech Support</li>
+												<li>200GB Storage Space</li>
+												<li>Unlimited User Access</li>
+											</ul>
+											<div class="tg-pkgplanfoot">
+												<a class="tg-btn" href="javascript:void(0);"><span>contact now</span></a>
+												<span class="tg-pkgplanprice"><sup>$</sup>79</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+										<div class="tg-pkgplan">
+											<div class="tg-pkgplantitle">
+												<h2>Group</h2>
+											</div>
+											<ul class="tg-pkgplanoptions">
+												<li>24/7 Free Tech Support</li>
+												<li>2GB Bandwidth Available</li>
+												<li>Unlimited User Access</li>
+												<li>24/7 Free Tech Support</li>
+												<li>200GB Storage Space</li>
+												<li>Unlimited User Access</li>
+											</ul>
+											<div class="tg-pkgplanfoot">
+												<a class="tg-btn" href="javascript:void(0);"><span>contact now</span></a>
+												<span class="tg-pkgplanprice"><sup>$</sup>130</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+										<div class="tg-pkgplan">
+											<div class="tg-pkgplantitle">
+												<h2>Wedding Session</h2>
+											</div>
+											<ul class="tg-pkgplanoptions">
+												<li>24/7 Free Tech Support</li>
+												<li>2GB Bandwidth Available</li>
+												<li>Unlimited User Access</li>
+												<li>24/7 Free Tech Support</li>
+												<li>200GB Storage Space</li>
+												<li>Unlimited User Access</li>
+											</ul>
+											<div class="tg-pkgplanfoot">
+												<a class="tg-btn" href="javascript:void(0);"><span>contact now</span></a>
+												<span class="tg-pkgplanprice"><sup>$</sup>195</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--************************************
+				Main End
+		*************************************-->";s:4:"code";N;s:5:"title";s:5:"Tours";s:3:"url";s:6:"/tours";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:18:"builderList editor";a:8:{s:10:"modelClass";s:26:"Aero\Manager\Models\Editor";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

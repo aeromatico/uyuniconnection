@@ -1,0 +1,84 @@
+title = "destinations"
+url = "/destinations/:slug"
+layout = "master"
+is_hidden = 0
+
+[viewBag]
+localeUrl[es] = "/destinations"
+
+[builderDetails destination]
+modelClass = "Aero\Manager\Models\Destinations"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "id"
+notFoundMessage = "Record not found"
+==
+{% set d = destination.record %}
+
+<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{{d.image.getPath}}">
+	<div class="tg-sectionspace tg-haslayout">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1>{{e.services_title}}</h1>
+					<h2>{{e.services_subtitle}}</h2>
+					<ol class="tg-breadcrumb">
+						<li><a href="{{app}}/?ref=nav">{{'Home' |_}}</a></li>
+						<li><a href="{{app}}/destinations">{{'Destinations' |_}}</a></li>
+						<li class="tg-active">{{d.name}}</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<main id="tg-main" class="tg-main tg-haslayout">
+    <div class="container">
+    	<div class="row">
+    		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    			<div id="tg-content" class="tg-content">
+    			
+                    <div class="tg-sectionhead"  style="margin-top: 50px">
+						<div class="tg-sectiontitle">
+							<h2>{{ "About" |_}}</h2>
+						</div>
+					</div>     			
+    			
+    			    <div>
+    			        {{d.description | raw}}
+    			    </div>
+    			    
+    			    {% if d.youtube %}
+    			    <div style="margin: 100px auto">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{d.youtube}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="-webkit-box-shadow: 0px 0px 54px -2px rgba(51,51,51,1); -moz-box-shadow: 0px 0px 54px -2px rgba(51,51,51,1); box-shadow: 0px 0px 54px -2px rgba(51,51,51,1);"></iframe>    			    
+    			    </div>
+    			    {% endif %}
+    			    
+                    <div class="tg-sectionhead"  style="margin-top: 100px">
+						<div class="tg-sectiontitle">
+							<h2>{{ "Photo Gallery" |_}}</h2>
+						</div>
+					</div>    			    
+    			    
+
+                	<div class="tg-gallery">
+                		<ul>
+                		
+                		    {% for c in d.gallery %}
+                			<li>
+                				<figure>
+                					<a href="{{c.getPath}}" data-rel="prettyPhoto[instagram]">
+                						<img src="{{c.getPath | resize(350, 350) }}" alt="{{d.name}}" style="height: 350px; width: 350px;">
+                					</a>
+                				</figure>
+                			</li>
+                			{% endfor %}
+                
+                		</ul>
+                	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

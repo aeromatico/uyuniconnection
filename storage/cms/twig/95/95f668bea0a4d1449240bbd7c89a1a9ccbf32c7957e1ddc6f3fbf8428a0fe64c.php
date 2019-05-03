@@ -20,16 +20,31 @@ class __TwigTemplate_f71203ef3f54ab6fc75b9757e420a1ec201495a1c38093c215c6c7e8188
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        echo "<section class=\"tg-parallax tg-innerbanner\" data-appear-top-offset=\"600\" data-parallax=\"scroll\" data-image-src=\"https://uyunisaltflatsbolivia-aeromatico.c9users.io/storage/app/uploads/public/5cb/f66/812/5cbf66812ac01609513071.jpg\">
+        $context["e"] = (($__internal_7cd7461123377b8c9c1b6a01f46c7bbd94bd12e59266005df5e93029ddbc0ec5 = twig_get_attribute($this->env, $this->source, ($context["editor"] ?? null), "records", [])) && is_array($__internal_7cd7461123377b8c9c1b6a01f46c7bbd94bd12e59266005df5e93029ddbc0ec5) || $__internal_7cd7461123377b8c9c1b6a01f46c7bbd94bd12e59266005df5e93029ddbc0ec5 instanceof ArrayAccess ? ($__internal_7cd7461123377b8c9c1b6a01f46c7bbd94bd12e59266005df5e93029ddbc0ec5[0] ?? null) : null);
+        // line 2
+        echo "
+<section class=\"tg-parallax tg-innerbanner\" data-appear-top-offset=\"600\" data-parallax=\"scroll\" data-image-src=\"";
+        // line 3
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["e"] ?? null), "contact_bg", []), "getPath", []), "html", null, true);
+        echo "\">
 \t\t\t<div class=\"tg-sectionspace tg-haslayout\">
 \t\t\t\t<div class=\"container\">
 \t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">
-\t\t\t\t\t\t\t<h1>About Us</h1>
-\t\t\t\t\t\t\t<h2>Donec id elit non mi porta gravida at eget metus</h2>
+\t\t\t\t\t\t\t<h1>";
+        // line 8
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Contact us"]);
+        echo "</h1>
+\t\t\t\t\t\t\t<h2>";
+        // line 9
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Keep in touch"]);
+        echo "</h2>
 \t\t\t\t\t\t\t<ol class=\"tg-breadcrumb\">
-\t\t\t\t\t\t\t\t<li><a href=\"javascript:void(0);\">Home</a></li>
-\t\t\t\t\t\t\t\t<li class=\"tg-active\">about us</li>
+\t\t\t\t\t\t\t\t<li><a href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, ($context["app"] ?? null), "html", null, true);
+        echo "\">Home</a></li>
+\t\t\t\t\t\t\t\t<li class=\"tg-active\">Contact us</li>
 \t\t\t\t\t\t\t</ol>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
@@ -75,23 +90,30 @@ class __TwigTemplate_f71203ef3f54ab6fc75b9757e420a1ec201495a1c38093c215c6c7e8188
         return "/home/ubuntu/workspace/themes/master/pages/contact.htm";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  23 => 1,);
+        return array (  45 => 11,  40 => 9,  36 => 8,  28 => 3,  25 => 2,  23 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Twig_Source("<section class=\"tg-parallax tg-innerbanner\" data-appear-top-offset=\"600\" data-parallax=\"scroll\" data-image-src=\"https://uyunisaltflatsbolivia-aeromatico.c9users.io/storage/app/uploads/public/5cb/f66/812/5cbf66812ac01609513071.jpg\">
+        return new Twig_Source("{% set e = editor.records[0] %}
+
+<section class=\"tg-parallax tg-innerbanner\" data-appear-top-offset=\"600\" data-parallax=\"scroll\" data-image-src=\"{{e.contact_bg.getPath}}\">
 \t\t\t<div class=\"tg-sectionspace tg-haslayout\">
 \t\t\t\t<div class=\"container\">
 \t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">
-\t\t\t\t\t\t\t<h1>About Us</h1>
-\t\t\t\t\t\t\t<h2>Donec id elit non mi porta gravida at eget metus</h2>
+\t\t\t\t\t\t\t<h1>{{'Contact us' |_}}</h1>
+\t\t\t\t\t\t\t<h2>{{\"Keep in touch\" |_}}</h2>
 \t\t\t\t\t\t\t<ol class=\"tg-breadcrumb\">
-\t\t\t\t\t\t\t\t<li><a href=\"javascript:void(0);\">Home</a></li>
-\t\t\t\t\t\t\t\t<li class=\"tg-active\">about us</li>
+\t\t\t\t\t\t\t\t<li><a href=\"{{app}}\">Home</a></li>
+\t\t\t\t\t\t\t\t<li class=\"tg-active\">Contact us</li>
 \t\t\t\t\t\t\t</ol>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>

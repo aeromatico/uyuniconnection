@@ -1,0 +1,78 @@
+[builderList destinations]
+modelClass = "Aero\Manager\Models\Destinations"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set destinations = destinations.records %}
+<footer id="tg-footer" class="tg-footer tg-haslayout">
+		<div class="tg-fourcolumns">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						<div class="tg-footercolumn tg-widget tg-widgettext">
+							<div class="tg-widgettitle">
+								<h3>About Us</h3>
+							</div>
+							<div class="tg-widgetcontent">
+								<div class="tg-description">
+									<p>Nunc cursus liero purs ac cogue arcu cursus ut sed vitae pulvinar massaidp nequetiam lore elerisque</p>
+								</div>
+								<span>(+591) 72418032</span>
+								<a href="mailto:info@travlu.com">info@uyuniconnectionbolivia.com</a>
+								<ul class="tg-socialicons tg-socialiconsvtwo">
+									<li><a href="javascript:void(0);"><i class="icon-facebook-logo-outline"></i></a></li>
+									<li><a href="javascript:void(0);"><i class="icon-instagram-social-outlined-logo"></i></a></li>
+									<li><a href="javascript:void(0);"><i class="icon-twitter-social-outlined-logo"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						<div class="tg-footercolumn tg-widget tg-widgetdestinations">
+							<div class="tg-widgettitle">
+								<h3>{{'Top Destinations' | _ }}</h3>
+							</div>
+							<div class="tg-widgetcontent">
+								<ul>
+								    {% for c in destinations %}
+									<li><a href="{{app}}/destinations/{{c.slug}}">{{c.name}}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						<div class="tg-footercolumn tg-widget tg-widgetnewsletter">
+							<div class="tg-widgettitle">
+								<h3>{{'Newsletter' | _ }}</h3>
+							</div>
+							<div class="tg-widgetcontent">
+								<div class="tg-description"><p>Sign up for our mailing list to get latest updates and offers</p></div>
+								<form class="tg-formtheme tg-formnewsletter">
+									<fieldset>
+										<input type="email" name="email" class="form-control" placeholder="Your Email">
+										<button type="submit"><img src="{{'assets/img/icons/icon-08.png' | theme }}" alt="image destinations"></button>
+									</fieldset>
+								</form>
+								<span>We respect your privacy</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tg-footerbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<p>Copyright &copy; 2019 Uyuni Connection. All  rights reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>

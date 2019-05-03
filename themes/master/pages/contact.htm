@@ -2,17 +2,29 @@ title = "Contact Us"
 url = "/contact"
 layout = "master"
 is_hidden = 0
+
+[builderList editor]
+modelClass = "Aero\Manager\Models\Editor"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
 ==
-<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="https://uyunisaltflatsbolivia-aeromatico.c9users.io/storage/app/uploads/public/5cb/f66/812/5cbf66812ac01609513071.jpg">
+{% set e = editor.records[0] %}
+
+<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{{e.contact_bg.getPath}}">
 			<div class="tg-sectionspace tg-haslayout">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<h1>About Us</h1>
-							<h2>Donec id elit non mi porta gravida at eget metus</h2>
+							<h1>{{'Contact us' |_}}</h1>
+							<h2>{{"Keep in touch" |_}}</h2>
 							<ol class="tg-breadcrumb">
-								<li><a href="javascript:void(0);">Home</a></li>
-								<li class="tg-active">about us</li>
+								<li><a href="{{app}}">Home</a></li>
+								<li class="tg-active">Contact us</li>
 							</ol>
 						</div>
 					</div>

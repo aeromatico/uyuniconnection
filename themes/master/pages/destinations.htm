@@ -1,0 +1,77 @@
+title = "Destinations"
+url = "/destinations"
+layout = "master"
+is_hidden = 0
+
+[viewBag]
+localeUrl[es] = "/destinations"
+
+[builderList editor]
+modelClass = "Aero\Manager\Models\Editor"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList destinations]
+modelClass = "Aero\Manager\Models\Destinations"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set e = editor.records[0] %}
+{% set destinations = destinations.records %}
+
+<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{{e.destinations_bg.getPath}}">
+	<div class="tg-sectionspace tg-haslayout">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1>{{"Top destinations" | _ }}</h1>
+					<h2>{{"Some of the most impressive places in the world" | _ }}</h2>
+					<ol class="tg-breadcrumb">
+						<li><a href="./?ref=nav">{{'Home' |_}}</a></li>
+						<li class="tg-active">{{"Top destinations" | _ }}</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<main id="tg-main" class="tg-main tg-sectionspace tg-haslayout">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div id="tg-content" class="tg-content">
+							<div class="tg-topdestinations">
+								<div class="row">
+								
+								    {% for c in destinations %}
+									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+										<div class="tg-topdestination">
+											<figure>
+												<a href="{{app}}/destinations/{{c.slug}}" class="tg-btnviewall">{{'View Gallery' | _ }}</a>
+												<a href="{{app}}/destinations/{{c.slug}}"><img src="{{c.image.getPath | resize(360, 360)}}" alt="{{c.name}}"></a>
+												<figcaption>
+													<h2><a href="{{app}}/destinations/{{c.slug}}">{{c.name}}</a></h2>
+													<span class="tg-totaltours">{{'Avalaible' | _}}</span>
+												</figcaption>
+											</figure>
+										</div>
+									</div>
+					                {% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>

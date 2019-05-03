@@ -69,15 +69,47 @@ class __TwigTemplate_27ae116977ee79edb853e4e5ceab06198c1b3bee35f60c0e8f1f630f745
 
 
     \t\t\t\t\t\t<ul class=\"tg-tripinfo\">
-    \t\t\t\t\t\t\t<li><span class=\"tg-tourduration\">4 days, 3 nights</span></li>
-    \t\t\t\t\t\t\t<li><span class=\"tg-tourduration tg-availabilty\">Availaible</span></li>
+    \t\t\t\t\t\t\t<li><span class=\"tg-tourduration\">";
+        // line 34
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["p"] ?? null), "days", []), "html", null, true);
+        echo " ";
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["days"]);
+        echo ", ";
+        echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, ($context["p"] ?? null), "days", []) - 1), "html", null, true);
+        echo ", ";
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["nights"]);
+        echo "
+    \t\t\t\t\t\t\t   </span></li>
+    \t\t\t\t\t\t\t<li><span class=\"tg-tourduration tg-availabilty\">";
+        // line 36
+        if ((twig_get_attribute($this->env, $this->source, ($context["p"] ?? null), "avalaible", []) == 1)) {
+            echo " ";
+            echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Avalaible"]);
+            echo " ";
+        } else {
+            echo " ";
+            echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Not avalaible"]);
+            echo " ";
+        }
+        echo "</span></li>
     \t\t\t\t\t\t\t<li><span class=\"tg-tourduration tg-location\">Uyuni</span></li>
-    \t\t\t\t\t\t\t<li><span class=\"tg-tourduration tg-peoples\">Shared</span></li>
+    \t\t\t\t\t\t\t<li><span class=\"tg-tourduration tg-peoples\">";
+        // line 38
+        if ((twig_get_attribute($this->env, $this->source, ($context["p"] ?? null), "type", []) == "Private")) {
+            echo " ";
+            echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Private"]);
+            echo " ";
+        } else {
+            echo " ";
+            echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Shared"]);
+            echo " ";
+        }
+        echo "</span></li>
     \t\t\t\t\t\t</ul>
     \t\t\t\t\t\t<div class=\"tg-refundshare\">
     \t\t\t\t\t\t\t<div class=\"tg-refund\">
     \t\t\t\t\t\t\t\t<figure><img src=\"";
-        // line 41
+        // line 42
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/img-03.jpg");
         echo "\" alt=\"image description\"></figure>
     \t\t\t\t\t\t\t\t<div class=\"tg-refundinfo\">
@@ -96,7 +128,7 @@ class __TwigTemplate_27ae116977ee79edb853e4e5ceab06198c1b3bee35f60c0e8f1f630f745
     \t\t\t\t\t\t\t\t\t\t<li><a href=\"javascript:void(0);\"><i class=\"icon-pinterest\"></i></a></li>
     \t\t\t\t\t\t\t\t\t</ul>
     \t\t\t\t\t\t\t\t</li>    \t
-    \t\t\t\t\t\t\t\t<li><a href=\"javascript:void(0);\"><i class=\"icon-eye\"></i>3520</a></li>
+<!--                                     <li><a href=\"javascript:void(0);\"><i class=\"icon-eye\"></i>3520</a></li> -->
     \t\t\t\t\t\t\t</ul>
     \t\t\t\t\t\t</div>
     \t\t\t\t\t</div>
@@ -132,7 +164,7 @@ class __TwigTemplate_27ae116977ee79edb853e4e5ceab06198c1b3bee35f60c0e8f1f630f745
     \t\t\t\t\t\t\t\t\t\t\t<h2>About this tour</h2>
     \t\t\t\t\t\t\t\t\t\t\t<div class=\"tg-description\">
     \t\t\t\t\t\t\t\t\t\t\t\t<p>";
-        // line 93
+        // line 94
         echo twig_get_attribute($this->env, $this->source, ($context["p"] ?? null), "description", []);
         echo "</p>
     \t\t\t\t\t\t\t\t\t\t\t</div>
@@ -143,7 +175,7 @@ class __TwigTemplate_27ae116977ee79edb853e4e5ceab06198c1b3bee35f60c0e8f1f630f745
     \t\t\t\t\t\t\t\t\t\t\t<h3>Services (Shared)</h3>
     \t\t\t\t\t\t\t\t\t\t\t<div class=\"tg-content\">
     \t\t\t\t\t\t\t\t\t\t\t\t<p>";
-        // line 101
+        // line 102
         echo twig_get_attribute($this->env, $this->source, ($context["p"] ?? null), "services_shared", []);
         echo "</p>
     \t\t\t\t\t\t\t\t\t\t\t</div>
@@ -154,7 +186,7 @@ class __TwigTemplate_27ae116977ee79edb853e4e5ceab06198c1b3bee35f60c0e8f1f630f745
     \t\t\t\t\t\t\t\t\t\t\t<h3>Services (Private)</h3>
     \t\t\t\t\t\t\t\t\t\t\t<div class=\"tg-content\">
     \t\t\t\t\t\t\t\t\t\t\t\t<p>";
-        // line 109
+        // line 110
         echo twig_get_attribute($this->env, $this->source, ($context["p"] ?? null), "services_private", []);
         echo "</p>
     \t\t\t\t\t\t\t\t\t\t\t</div>
@@ -167,20 +199,20 @@ class __TwigTemplate_27ae116977ee79edb853e4e5ceab06198c1b3bee35f60c0e8f1f630f745
     \t\t\t\t\t\t\t\t\t\t\t<div class=\"tg-accordion\" role=\"tablist\" aria-multiselectable=\"true\">
     \t\t\t\t\t\t\t\t\t\t\t
     \t\t\t\t\t\t\t\t\t\t\t    ";
-        // line 119
+        // line 120
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["p"] ?? null), "itinerary", []));
         foreach ($context['_seq'] as $context["_key"] => $context["c"]) {
-            // line 120
+            // line 121
             echo "    \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"tg-panel\">
     \t\t\t\t\t\t\t\t\t\t\t\t\t<h4>";
-            // line 121
+            // line 122
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "title", []), "html", null, true);
             echo "<span>Lorem ipsum dolor sit amet consectetuer.</span></h4>
     \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"tg-panelcontent\">
     \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"tg-description\">
     \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>";
-            // line 124
+            // line 125
             echo twig_get_attribute($this->env, $this->source, $context["c"], "description", []);
             echo "</p>
     \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
@@ -191,7 +223,7 @@ class __TwigTemplate_27ae116977ee79edb853e4e5ceab06198c1b3bee35f60c0e8f1f630f745
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['c'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 129
+        // line 130
         echo "
     \t\t\t\t\t\t\t\t\t\t\t</div>
     \t\t\t\t\t\t\t\t\t\t</div>
@@ -213,21 +245,23 @@ class __TwigTemplate_27ae116977ee79edb853e4e5ceab06198c1b3bee35f60c0e8f1f630f745
     \t\t\t\t\t\t\t\t\t\t<ul>
     \t\t\t\t\t\t\t\t\t\t
     \t\t\t\t\t\t\t\t\t\t    ";
-        // line 149
+        // line 150
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["p"] ?? null), "gallery", []));
         foreach ($context['_seq'] as $context["_key"] => $context["c"]) {
-            // line 150
+            // line 151
             echo "    \t\t\t\t\t\t\t\t\t\t\t<li>
     \t\t\t\t\t\t\t\t\t\t\t\t<figure>
     \t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 152
+            // line 153
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "getPath", []), "html", null, true);
             echo "\" data-rel=\"prettyPhoto[instagram]\">
     \t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-            // line 153
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "getPath", []), "html", null, true);
-            echo "\" alt=\"image decruoton\">
+            // line 154
+            echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [twig_get_attribute($this->env, $this->source, $context["c"], "getPath", []), 350, 350]);
+            echo "\" alt=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["p"] ?? null), "name", []), "html", null, true);
+            echo "\" style=\"height: 350px; width: 350px;\">
     \t\t\t\t\t\t\t\t\t\t\t\t\t</a>
     \t\t\t\t\t\t\t\t\t\t\t\t</figure>
     \t\t\t\t\t\t\t\t\t\t\t</li>
@@ -236,7 +270,7 @@ class __TwigTemplate_27ae116977ee79edb853e4e5ceab06198c1b3bee35f60c0e8f1f630f745
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['c'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 158
+        // line 159
         echo "
     \t\t\t\t\t\t\t\t\t\t</ul>
     \t\t\t\t\t\t\t\t\t</div>
@@ -265,7 +299,7 @@ class __TwigTemplate_27ae116977ee79edb853e4e5ceab06198c1b3bee35f60c0e8f1f630f745
 
     public function getDebugInfo()
     {
-        return array (  240 => 158,  229 => 153,  225 => 152,  221 => 150,  217 => 149,  195 => 129,  184 => 124,  178 => 121,  175 => 120,  171 => 119,  158 => 109,  147 => 101,  136 => 93,  81 => 41,  66 => 29,  62 => 28,  54 => 23,  48 => 20,  28 => 3,  25 => 2,  23 => 1,);
+        return array (  274 => 159,  261 => 154,  257 => 153,  253 => 151,  249 => 150,  227 => 130,  216 => 125,  210 => 122,  207 => 121,  203 => 120,  190 => 110,  179 => 102,  168 => 94,  113 => 42,  98 => 38,  85 => 36,  74 => 34,  66 => 29,  62 => 28,  54 => 23,  48 => 20,  28 => 3,  25 => 2,  23 => 1,);
     }
 
     public function getSourceContext()
@@ -303,10 +337,11 @@ class __TwigTemplate_27ae116977ee79edb853e4e5ceab06198c1b3bee35f60c0e8f1f630f745
 
 
     \t\t\t\t\t\t<ul class=\"tg-tripinfo\">
-    \t\t\t\t\t\t\t<li><span class=\"tg-tourduration\">4 days, 3 nights</span></li>
-    \t\t\t\t\t\t\t<li><span class=\"tg-tourduration tg-availabilty\">Availaible</span></li>
+    \t\t\t\t\t\t\t<li><span class=\"tg-tourduration\">{{p.days}} {{'days' |_}}, {{p.days - 1}}, {{'nights' |_}}
+    \t\t\t\t\t\t\t   </span></li>
+    \t\t\t\t\t\t\t<li><span class=\"tg-tourduration tg-availabilty\">{% if p.avalaible == 1 %} {{'Avalaible' | _}} {% else %} {{'Not avalaible' | _}} {% endif %}</span></li>
     \t\t\t\t\t\t\t<li><span class=\"tg-tourduration tg-location\">Uyuni</span></li>
-    \t\t\t\t\t\t\t<li><span class=\"tg-tourduration tg-peoples\">Shared</span></li>
+    \t\t\t\t\t\t\t<li><span class=\"tg-tourduration tg-peoples\">{% if p.type == 'Private' %} {{'Private' | _}} {% else %} {{'Shared' | _}} {% endif %}</span></li>
     \t\t\t\t\t\t</ul>
     \t\t\t\t\t\t<div class=\"tg-refundshare\">
     \t\t\t\t\t\t\t<div class=\"tg-refund\">
@@ -327,7 +362,7 @@ class __TwigTemplate_27ae116977ee79edb853e4e5ceab06198c1b3bee35f60c0e8f1f630f745
     \t\t\t\t\t\t\t\t\t\t<li><a href=\"javascript:void(0);\"><i class=\"icon-pinterest\"></i></a></li>
     \t\t\t\t\t\t\t\t\t</ul>
     \t\t\t\t\t\t\t\t</li>    \t
-    \t\t\t\t\t\t\t\t<li><a href=\"javascript:void(0);\"><i class=\"icon-eye\"></i>3520</a></li>
+<!--                                     <li><a href=\"javascript:void(0);\"><i class=\"icon-eye\"></i>3520</a></li> -->
     \t\t\t\t\t\t\t</ul>
     \t\t\t\t\t\t</div>
     \t\t\t\t\t</div>
@@ -422,7 +457,7 @@ class __TwigTemplate_27ae116977ee79edb853e4e5ceab06198c1b3bee35f60c0e8f1f630f745
     \t\t\t\t\t\t\t\t\t\t\t<li>
     \t\t\t\t\t\t\t\t\t\t\t\t<figure>
     \t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{c.getPath}}\" data-rel=\"prettyPhoto[instagram]\">
-    \t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{c.getPath}}\" alt=\"image decruoton\">
+    \t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{c.getPath | resize(350, 350) }}\" alt=\"{{p.name}}\" style=\"height: 350px; width: 350px;\">
     \t\t\t\t\t\t\t\t\t\t\t\t\t</a>
     \t\t\t\t\t\t\t\t\t\t\t\t</figure>
     \t\t\t\t\t\t\t\t\t\t\t</li>

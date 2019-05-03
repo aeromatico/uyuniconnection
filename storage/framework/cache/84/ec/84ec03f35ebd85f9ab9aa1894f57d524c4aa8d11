@@ -1,0 +1,145 @@
+1556911309a:1:{s:10:"footer.htm";a:6:{s:8:"fileName";s:10:"footer.htm";s:7:"content";s:2935:"[builderList destinations]
+modelClass = "Aero\Manager\Models\Destinations"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set destinations = destinations.records %}
+<footer id="tg-footer" class="tg-footer tg-haslayout">
+		<div class="tg-fourcolumns">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						<div class="tg-footercolumn tg-widget tg-widgettext">
+							<div class="tg-widgettitle">
+								<h3>About Us</h3>
+							</div>
+							<div class="tg-widgetcontent">
+								<div class="tg-description">
+									<p>Nunc cursus liero purs ac cogue arcu cursus ut sed vitae pulvinar massaidp nequetiam lore elerisque</p>
+								</div>
+								<span>(+591) 72418032</span>
+								<a href="mailto:info@travlu.com">info@uyuniconnectionbolivia.com</a>
+								<ul class="tg-socialicons tg-socialiconsvtwo">
+									<li><a href="javascript:void(0);"><i class="icon-facebook-logo-outline"></i></a></li>
+									<li><a href="javascript:void(0);"><i class="icon-instagram-social-outlined-logo"></i></a></li>
+									<li><a href="javascript:void(0);"><i class="icon-twitter-social-outlined-logo"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						<div class="tg-footercolumn tg-widget tg-widgetdestinations">
+							<div class="tg-widgettitle">
+								<h3>{{'Top Destinations' | _ }}</h3>
+							</div>
+							<div class="tg-widgetcontent">
+								<ul>
+								    {% for c in destinations %}
+									<li><a href="{{app}}/destinations/{{c.slug}}">{{c.name}}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						<div class="tg-footercolumn tg-widget tg-widgetnewsletter">
+							<div class="tg-widgettitle">
+								<h3>{{'Newsletter' | _ }}</h3>
+							</div>
+							<div class="tg-widgetcontent">
+								<div class="tg-description"><p>Sign up for our mailing list to get latest updates and offers</p></div>
+								<form class="tg-formtheme tg-formnewsletter">
+									<fieldset>
+										<input type="email" name="email" class="form-control" placeholder="Your Email">
+										<button type="submit"><img src="{{'assets/img/icons/icon-08.png' | theme }}" alt="image destinations"></button>
+									</fieldset>
+								</form>
+								<span>We respect your privacy</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tg-footerbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<p>Copyright &copy; 2019 Uyuni Connection. All  rights reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>";s:5:"mtime";i:1556906458;s:6:"markup";s:2686:"{% set destinations = destinations.records %}
+<footer id="tg-footer" class="tg-footer tg-haslayout">
+		<div class="tg-fourcolumns">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						<div class="tg-footercolumn tg-widget tg-widgettext">
+							<div class="tg-widgettitle">
+								<h3>About Us</h3>
+							</div>
+							<div class="tg-widgetcontent">
+								<div class="tg-description">
+									<p>Nunc cursus liero purs ac cogue arcu cursus ut sed vitae pulvinar massaidp nequetiam lore elerisque</p>
+								</div>
+								<span>(+591) 72418032</span>
+								<a href="mailto:info@travlu.com">info@uyuniconnectionbolivia.com</a>
+								<ul class="tg-socialicons tg-socialiconsvtwo">
+									<li><a href="javascript:void(0);"><i class="icon-facebook-logo-outline"></i></a></li>
+									<li><a href="javascript:void(0);"><i class="icon-instagram-social-outlined-logo"></i></a></li>
+									<li><a href="javascript:void(0);"><i class="icon-twitter-social-outlined-logo"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						<div class="tg-footercolumn tg-widget tg-widgetdestinations">
+							<div class="tg-widgettitle">
+								<h3>{{'Top Destinations' | _ }}</h3>
+							</div>
+							<div class="tg-widgetcontent">
+								<ul>
+								    {% for c in destinations %}
+									<li><a href="{{app}}/destinations/{{c.slug}}">{{c.name}}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						<div class="tg-footercolumn tg-widget tg-widgetnewsletter">
+							<div class="tg-widgettitle">
+								<h3>{{'Newsletter' | _ }}</h3>
+							</div>
+							<div class="tg-widgetcontent">
+								<div class="tg-description"><p>Sign up for our mailing list to get latest updates and offers</p></div>
+								<form class="tg-formtheme tg-formnewsletter">
+									<fieldset>
+										<input type="email" name="email" class="form-control" placeholder="Your Email">
+										<button type="submit"><img src="{{'assets/img/icons/icon-08.png' | theme }}" alt="image destinations"></button>
+									</fieldset>
+								</form>
+								<span>We respect your privacy</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tg-footerbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<p>Copyright &copy; 2019 Uyuni Connection. All  rights reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>";s:4:"code";N;s:24:"builderList destinations";a:8:{s:10:"modelClass";s:32:"Aero\Manager\Models\Destinations";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

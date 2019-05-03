@@ -10,7 +10,10 @@ permissions:
         label: Slider
     managerPacks:
         tab: Manager
-        label: Packs
+        label: 'Paquetes turísticos'
+    managerDestinations:
+        tab: Manager
+        label: Destinos
 navigation:
     manager:
         label: Gestionar
@@ -23,6 +26,10 @@ navigation:
                 url: aero/manager/editor/update/1
                 icon: icon-pencil-square-o
             managerPacks:
-                label: Packs
+                label: 'Paquetes turísticos'
                 url: aero/manager/packs
                 icon: icon-sitemap
+            managerDestinations:
+                label: Destinos
+                url: aero/manager/destinations
+                icon: icon-suitcase

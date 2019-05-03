@@ -1,18 +1,30 @@
-1556058320a:1:{s:11:"contact.htm";a:9:{s:8:"fileName";s:11:"contact.htm";s:7:"content";s:2140:"title = "Contact Us"
+1556911258a:1:{s:11:"contact.htm";a:10:{s:8:"fileName";s:11:"contact.htm";s:7:"content";s:2292:"title = "Contact Us"
 url = "/contact"
 layout = "master"
 is_hidden = 0
+
+[builderList editor]
+modelClass = "Aero\Manager\Models\Editor"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
 ==
-<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="https://uyunisaltflatsbolivia-aeromatico.c9users.io/storage/app/uploads/public/5cb/f66/812/5cbf66812ac01609513071.jpg">
+{% set e = editor.records[0] %}
+
+<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{{e.contact_bg.getPath}}">
 			<div class="tg-sectionspace tg-haslayout">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<h1>About Us</h1>
-							<h2>Donec id elit non mi porta gravida at eget metus</h2>
+							<h1>{{'Contact us' |_}}</h1>
+							<h2>{{"Keep in touch" |_}}</h2>
 							<ol class="tg-breadcrumb">
-								<li><a href="javascript:void(0);">Home</a></li>
-								<li class="tg-active">about us</li>
+								<li><a href="{{app}}">Home</a></li>
+								<li class="tg-active">Contact us</li>
 							</ol>
 						</div>
 					</div>
@@ -50,16 +62,18 @@ is_hidden = 0
     		</div>
     	</div>
     </div>
-</main>";s:5:"mtime";i:1556056694;s:6:"markup";s:2067:"<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="https://uyunisaltflatsbolivia-aeromatico.c9users.io/storage/app/uploads/public/5cb/f66/812/5cbf66812ac01609513071.jpg">
+</main>";s:5:"mtime";i:1556907615;s:6:"markup";s:1984:"{% set e = editor.records[0] %}
+
+<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{{e.contact_bg.getPath}}">
 			<div class="tg-sectionspace tg-haslayout">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<h1>About Us</h1>
-							<h2>Donec id elit non mi porta gravida at eget metus</h2>
+							<h1>{{'Contact us' |_}}</h1>
+							<h2>{{"Keep in touch" |_}}</h2>
 							<ol class="tg-breadcrumb">
-								<li><a href="javascript:void(0);">Home</a></li>
-								<li class="tg-active">about us</li>
+								<li><a href="{{app}}">Home</a></li>
+								<li class="tg-active">Contact us</li>
 							</ol>
 						</div>
 					</div>
@@ -97,4 +111,4 @@ is_hidden = 0
     		</div>
     	</div>
     </div>
-</main>";s:4:"code";N;s:5:"title";s:10:"Contact Us";s:3:"url";s:8:"/contact";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";}}
+</main>";s:4:"code";N;s:5:"title";s:10:"Contact Us";s:3:"url";s:8:"/contact";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:18:"builderList editor";a:8:{s:10:"modelClass";s:26:"Aero\Manager\Models\Editor";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

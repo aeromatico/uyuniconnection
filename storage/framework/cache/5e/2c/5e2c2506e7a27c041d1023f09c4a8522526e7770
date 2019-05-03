@@ -1,0 +1,125 @@
+1556911309a:1:{s:16:"destinations.htm";a:12:{s:8:"fileName";s:16:"destinations.htm";s:7:"content";s:2404:"title = "Destinations"
+url = "/destinations"
+layout = "master"
+is_hidden = 0
+
+[viewBag]
+localeUrl[es] = "/destinations"
+
+[builderList editor]
+modelClass = "Aero\Manager\Models\Editor"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList destinations]
+modelClass = "Aero\Manager\Models\Destinations"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set e = editor.records[0] %}
+{% set destinations = destinations.records %}
+
+<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{{e.destinations_bg.getPath}}">
+	<div class="tg-sectionspace tg-haslayout">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1>{{"Top destinations" | _ }}</h1>
+					<h2>{{"Some of the most impressive places in the world" | _ }}</h2>
+					<ol class="tg-breadcrumb">
+						<li><a href="./?ref=nav">{{'Home' |_}}</a></li>
+						<li class="tg-active">{{"Top destinations" | _ }}</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<main id="tg-main" class="tg-main tg-sectionspace tg-haslayout">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div id="tg-content" class="tg-content">
+							<div class="tg-topdestinations">
+								<div class="row">
+								
+								    {% for c in destinations %}
+									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+										<div class="tg-topdestination">
+											<figure>
+												<a href="{{app}}/destinations/{{c.slug}}" class="tg-btnviewall">{{'View Gallery' | _ }}</a>
+												<a href="{{app}}/destinations/{{c.slug}}"><img src="{{c.image.getPath | resize(360, 360)}}" alt="{{c.name}}"></a>
+												<figcaption>
+													<h2><a href="{{app}}/destinations/{{c.slug}}">{{c.name}}</a></h2>
+													<span class="tg-totaltours">{{'Avalaible' | _}}</span>
+												</figcaption>
+											</figure>
+										</div>
+									</div>
+					                {% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>";s:5:"mtime";i:1556910665;s:6:"markup";s:1799:"{% set e = editor.records[0] %}
+{% set destinations = destinations.records %}
+
+<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{{e.destinations_bg.getPath}}">
+	<div class="tg-sectionspace tg-haslayout">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1>{{"Top destinations" | _ }}</h1>
+					<h2>{{"Some of the most impressive places in the world" | _ }}</h2>
+					<ol class="tg-breadcrumb">
+						<li><a href="./?ref=nav">{{'Home' |_}}</a></li>
+						<li class="tg-active">{{"Top destinations" | _ }}</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<main id="tg-main" class="tg-main tg-sectionspace tg-haslayout">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div id="tg-content" class="tg-content">
+							<div class="tg-topdestinations">
+								<div class="row">
+								
+								    {% for c in destinations %}
+									<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+										<div class="tg-topdestination">
+											<figure>
+												<a href="{{app}}/destinations/{{c.slug}}" class="tg-btnviewall">{{'View Gallery' | _ }}</a>
+												<a href="{{app}}/destinations/{{c.slug}}"><img src="{{c.image.getPath | resize(360, 360)}}" alt="{{c.name}}"></a>
+												<figcaption>
+													<h2><a href="{{app}}/destinations/{{c.slug}}">{{c.name}}</a></h2>
+													<span class="tg-totaltours">{{'Avalaible' | _}}</span>
+												</figcaption>
+											</figure>
+										</div>
+									</div>
+					                {% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>";s:4:"code";N;s:5:"title";s:12:"Destinations";s:3:"url";s:13:"/destinations";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:7:"viewBag";a:1:{s:9:"localeUrl";a:1:{s:2:"es";s:13:"/destinations";}}s:18:"builderList editor";a:8:{s:10:"modelClass";s:26:"Aero\Manager\Models\Editor";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}s:24:"builderList destinations";a:8:{s:10:"modelClass";s:32:"Aero\Manager\Models\Destinations";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}
